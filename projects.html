@@ -7,6 +7,10 @@
   <meta name="keywords" content="HTML, projects, portfolio" />
   <meta name="author" content="Your Name" />
   <title>Projects | My Basic Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -15,29 +19,72 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="articles.html">Articles</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+      🌙
+    </button>
   </header>
 
   <main>
-    <section>
-      <h2>Projects</h2>
-      <article>
-        <h3>Project 1</h3>
-        <p>Description of your first project.</p>
-      </article>
-      <article>
-        <h3>Project 2</h3>
-        <p>Description of your second project.</p>
-      </article>
+    <!-- Hero Banner -->
+    <section class="hero colorful">
+      <div class="hero-content">
+        <h2>My Web Development Projects</h2>
+        <p>
+          Here’s a collection of my personal and class-based projects showcasing my journey in learning HTML, CSS, and beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+      <h2>Recent Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A responsive portfolio built using HTML and CSS to showcase my skills, projects, and contact information in a clean layout.
+          </p>
+          <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project">
+          <h3>Recipe Finder App</h3>
+          <p>
+            A simple web app that allows users to search for recipes and display ingredients dynamically using API integration.
+          </p>
+          <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project">
+          <h3>Landing Page Design</h3>
+          <p>
+            A visually appealing landing page design for a fictional product, focusing on responsive layout and modern UI elements.
+          </p>
+          <a href="#" class="project-btn">View Project</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 My Basic Website | All rights reserved.</p>
   </footer>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggleButton = document.getElementById("darkModeToggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleButton.textContent =
+        document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>

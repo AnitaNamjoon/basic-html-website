@@ -1,0 +1,344 @@
+/* === Import Google Font === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* === Color Variables === */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #a855f7;
+  --accent-color: #f472b6;
+  --bg-color: #ffffff;
+  --section-bg: #f9fafb;
+  --text-color: #1f2937;
+}
+
+body.dark-mode {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --section-bg: #1f2937;
+  --primary-color: #818cf8;
+  --secondary-color: #c084fc;
+  --accent-color: #f9a8d4;
+}
+
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* === Header === */
+header {
+  position: relative;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* === Navigation === */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* === Dark Mode Toggle Button === */
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: rotate(20deg);
+}
+
+body.dark-mode #theme-toggle {
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === Main Section === */
+main {
+  flex: 1;
+  padding: 2rem;
+  background: var(--section-bg);
+  text-align: center;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+/* === Hero Section (for Homepage) === */
+.hero {
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 1s ease;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+.cta {
+  display: inline-block;
+  background: white;
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* === About Section === */
+.about {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* === Project Page === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card h3 {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* === Articles Page === */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.article-card {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.article-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.article-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* === Contact Page === */
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--secondary-color);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+form button {
+  width: 100%;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Footer === */
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .projects-grid,
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  #theme-toggle {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
