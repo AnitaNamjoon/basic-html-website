@@ -1,7 +1,9 @@
 # 🌐 Basic HTML & CSS Website
 
 This project is based on the [Basic HTML Website project from roadmap.sh](https://roadmap.sh/projects/basic-html-website).  
-Originally focused on **HTML structure and semantics**, it has now been **enhanced with modern CSS styling** to make it visually appealing, colorful, and responsive.
+Originally focused on **HTML structure and semantics**, it has now been **enhanced with modern CSS styling** to make it visually appealing, colorful, and responsive.  
+
+It also connects to the next step in your learning path — the [Portfolio Website project](https://roadmap.sh/projects/portfolio-website).
 
 ---
 
@@ -9,7 +11,7 @@ Originally focused on **HTML structure and semantics**, it has now been **enhanc
 
 The website consists of multiple pages — Home, Projects, Articles, and Contact — all connected through a navigation bar.  
 The focus is on learning how to use **CSS** to:
-- Create **responsive layouts**  
+- Create **responsive layouts**
 - Apply **colors, typography, and spacing**
 - Improve **usability and design aesthetics**
 
@@ -87,11 +89,16 @@ The layout adjusts automatically for:
 
 ---
 
-## 🔗 Reference
+## 🔗 References
 
-- Project link: [https://roadmap.sh/projects/basic-html-website](https://roadmap.sh/projects/basic-html-website)
-- Repository: [https://github.com/AnitaNamjoon/basic-html-website/tree/my-new-patch](https://github.com/AnitaNamjoon/basic-html-website/tree/my-new-patch)
+- [Basic HTML Website Project](https://roadmap.sh/projects/basic-html-website)  
+- [Portfolio Website Project (Next Step)](https://roadmap.sh/projects/portfolio-website)  
+- [GitHub Repository](https://github.com/AnitaNamjoon/basic-html-website/tree/my-new-patch)
 
 ---
 
+### 💡 Author
+
+**Anita Namjoon**  
+Frontend Developer in training — passionate about clean design and responsive web development.
 
